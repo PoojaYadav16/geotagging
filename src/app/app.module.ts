@@ -10,6 +10,9 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { HomeComponent } from './home/home.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { IndiaMapComponent } from './india-map/india-map.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     FooterComponent,
     LoginComponent,
     ContactusComponent,
-    AboutusComponent
+    AboutusComponent,
+    HomeComponent,
+    MainpageComponent,
+    IndiaMapComponent
   ],
   imports: [
     BrowserModule,
