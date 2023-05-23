@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,7 @@ import { UserService } from '../user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent  {
-  constructor(private service:UserService)
+  constructor(private service:UserService,private route:Router)
   {
 
   }
@@ -24,8 +25,18 @@ export class LoginComponent  {
     {
       console.log(data);
       
-      this.service.login(data).subscribe((result)=>{
+      this.service.login(data).subscribe((result:any)=>{
+        
         console.log(result);
+        if(result.error=="true")
+        {
+          console.log("Invalid")
+        }
+        else
+        {
+            console.log("valid")
+            this.route.navigate(["loginclick"]);
+        }
       });
     }
   

@@ -18,6 +18,9 @@ import { IndiaMapComponent } from './india-map/india-map.component';
 import { FormsModule } from '@angular/forms';
 import { FactsComponent } from './facts/facts.component';
 import { FooterComponent } from './footer/footer.component';
+import { ClgDetailsComponent } from './clg-details/clg-details.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -33,13 +36,16 @@ import { FooterComponent } from './footer/footer.component';
     MainpageComponent,
     IndiaMapComponent,
     FactsComponent,
-    FooterComponent
+    FooterComponent,
+    ClgDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

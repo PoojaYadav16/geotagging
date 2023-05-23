@@ -14,6 +14,7 @@ const routes: Routes = [
   {
     path: "loginclick", component: MainpageComponent, title: "Login"
   },
+  
 ];
 
 @NgModule({

@@ -11,4 +11,30 @@ export class UserService {
   {
     return this.http.post("http://localhost:3000/login",userdata);
   }
+  getAllState()
+  {
+    return this.http.get("http://localhost:3000/allstate");
+
+  }
+
+  getAllCitiesbysid(sid:any)
+  {
+    return this.http.get("http://localhost:3000/allcities/"+sid);
+
+  }
+
+  getAllCollegebycid(cid:any)
+  {
+    return this.http.get("http://localhost:3000/allcollege/"+cid);
+
+  }
+  getCollegeByCid(cid:any)
+  {
+    return this.http.get("http://localhost:3000/getcollegebycid/"+cid);
+  }
+  getStateById(id:any)
+  {
+    return this.http.get("http://localhost:3000/statebyid/"+id);
+
+  }
 }
